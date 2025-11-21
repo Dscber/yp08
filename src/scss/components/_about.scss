@@ -1,0 +1,29 @@
+.about-card {
+  width: 70%;
+  max-width: 900px;
+  margin: 80px auto;
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 30px;
+  text-align: center;
+
+  /* Мягкие многослойные тени */
+  box-shadow:
+          20px 120px 200px rgba(0, 0, 0, 0),    /* 1 */
+          0px 2px 120px rgba(0, 0, 0, 0.01),    /* 2 */
+          0px 2px 120px rgba(0, 0, 0, 0.05),    /* 3 */
+          0px 2px 120px rgba(0, 0, 0, 0.09),    /* 4 */
+          0px 2px 65px rgba(0, 0, 0, 0.10);     /* 5–6 */
+}
+
+.about-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}

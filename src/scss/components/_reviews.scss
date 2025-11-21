@@ -1,0 +1,99 @@
+.reviews {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 60px 0;
+  text-align: center;
+  background: #EEEEEE;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 100px;
+  .review-card::-webkit-scrollbar {
+    height: 10px;
+  }
+  .review-card::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 40px;
+  }
+
+  &__track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.35s ease;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    opacity: 0.6;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+}
+
+.review-card {
+  flex: 0 0 300px;
+  background: #ffffff;
+  padding: 25px 22px;
+  border-radius: 14px;
+  text-align: left;
+  position: relative;
+
+  &__icon {
+    width: 28px;
+    position: absolute;
+    top: 38px;
+    right: 22px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.42;
+    color: #444;
+  }
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 260px;
+  }
+}

@@ -1,0 +1,22 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 350px;
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 0.8;
+  }
+}

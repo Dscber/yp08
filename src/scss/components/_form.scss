@@ -1,0 +1,143 @@
+.request-form {
+  background: #fff;
+  margin: 0 auto;
+
+  /* Чтобы сверху был красивый воздух */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 650px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+
+  &__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  &__input {
+    width: 90%;
+    padding: 18px;
+    margin-top: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    background: #e6e6e6;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 25px;
+
+    input {
+      width: 22px;
+      height: 22px;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 1.3;
+
+      a {
+        color: #0045ff;
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    background: #ffa200;
+    color: white;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+  }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // два блока рядом
+  gap: 40px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- адаптив --- */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr; // один под другим
+    gap: 60px;
+  }
+}
+
+.contact {
+  width: 100%;
+}
+
+.request-form {
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 650px;
+  margin: 0 auto;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.request-form__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.request-form__label {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.request-form__input {
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 12px;
+  border: none;
+  background: #e6e6e6;
+  font-size: 16px;
+}
+
+.request-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+
+  input {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.btn-orange {
+  background: #ff9f00;
+  color: #fff;
+  border: none;
+  padding: 18px;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+}

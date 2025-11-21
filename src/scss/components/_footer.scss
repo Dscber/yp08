@@ -1,0 +1,102 @@
+.footer__rect1{
+//   padding-left: -140px;
+//   margin-left: -140px;
+  margin-top: 20px;
+  width: 1440px;
+  height: 1px;
+  background-color: #9F9F9F;
+}
+.footer{
+  display: flex;
+  gap: 100px;
+  padding-left: 140px;
+  padding-top: 80px;
+  &__1st{
+    &__furniro{
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 90px;
+    }
+    &__txt{
+      padding-top: 40px;
+      font-weight: 350;
+      font-size: 16px;
+      color: #9F9F9F;
+    }
+  }
+  &__2st{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 90px;
+    &__links{
+      color: #9F9F9F;
+    }
+  }
+  &__3st{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 90px;
+    &__help{
+      color: #9F9F9F;
+    }
+  }
+  &__4st{
+    &__txt{
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 90px;
+      color: #9F9F9F;
+    }
+    &__rect1{
+
+    }
+    &__form{
+      padding-top: 30px;
+      display: flex;
+      gap: 100px;
+
+      &__inp{
+        width: 180px;
+        height: 80px;
+
+        &__input{
+          font-size: 21px;
+          border: none;
+          background-color: #FFF;
+        }
+        &__rect1{
+          width: 255px;
+          height: 2px;
+          background-color: #000;
+        }
+      }
+      &__btn{
+        width: 90px;
+        height: 50px;
+        background-color: #FFF;
+        &__but{
+          border: none;
+          font-size: 21px;
+          background-color: #FFF;
+        }
+        &__rect2{
+          width: 130px;
+          height: 2px;
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+.footer__rect{
+  margin-left: 120px;
+  width: 1200px;
+  height: 1px;
+  background-color: #666666;
+}
+.footer__txt{
+  height: 120px;
+  font-size: 24px;
+  margin-left: 120px;
+  margin-top: 48px;
+}

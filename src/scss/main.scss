@@ -1,0 +1,38 @@
+// ==== 1. Utils ====
+@use 'utils/variables';
+
+// ==== 2. Base styles ====
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+
+ //==== 3. Layout ====
+@use 'layout/container';
+
+// ==== 4. Components ====
+@use 'components/footer';
+@use 'components/card';
+@use 'components/header';
+@use 'components/kartochki';
+@use 'components/homenext';
+@use 'components/str2';
+@use 'components/about';
+@use 'components/hero';
+@use 'components/feature-card';
+@use 'components/features';
+@use 'components/albums';
+@use 'components/album-card';
+@use 'components/reviews';
+@use 'components/contact';
+@use 'components/modal';
+@use 'components/form';
+
+body {
+  background-color: var(--main-color);
+  margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+

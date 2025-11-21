@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <title>Document</title>
+</head>
+<body>
+
+
+
+@@include('../components/_header.html')
+
+@@include('../components/_hero.html')
+
+@@include('../components/_about.html')
+
+<main>
+
+    <section class="features">
+
+        <h2 class="features__title">
+            УНИКАЛЬНЫЕ ОСОБЕННОСТИ, КОТОРЫМ ВЫ БУДЕТЕ ГОРДИТЬСЯ:
+        </h2>
+
+        <div class="features__grid">
+
+            @@include('../components/_feature-card.html', {
+            "icon": "../assets/images//mic.svg",
+            "title": "Экстра-качество звука",
+            "text": "Используем микрофоны и оборудование от мировых брендов — ваш трек будет звучать на уровне топовых студий."
+            })
+
+            @@include('../components/_feature-card.html', {
+            "icon": "../assets/images//user.svg",
+            "title": "Индивидуальный подход",
+            "text": "Слушаем ваши идеи, учитываем каждую деталь, создаем уникальное звучание."
+            })
+
+            @@include('../components/_feature-card.html', {
+            "icon": "../assets/images/guitar.svg",
+            "title": "Живые инструменты для глубины",
+            "text": "Добавляем атмосферу с помощью акустических инструментов."
+            })
+
+            @@include('../components/_feature-card.html', {
+            "icon": "../assets/images/note.svg",
+            "title": "Помощь новичкам — без стресса",
+            "text": "Подскажем, исправим ноты, улучшим вокал и сделаем процесс комфортным."
+            })
+
+            @@include('../components/_feature-card.html', {
+            "icon": "../assets/images/mix.svg",
+            "title": "Сведение и мастеринг",
+            "text": "Готовый к релизу кристально чистый звук."
+            })
+
+        </div>
+
+    </section>
+
+    <section class="albums">
+        <h2 class="albums__title">АЛЬБОМЫ ЗАПИСАННЫЕ У НАС</h2>
+
+        <div class="albums__grid">
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_11.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_12.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_13.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_14.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_15.svg"
+            })
+
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__track">
+
+            @@include('../components/review-card.html', {
+            "name": "Максим",
+            "text": "Обращался для записи демо-версии своей песни. Очень порадовало внимание к мелочам, гитара звучит сочно, вокал чистый. По деньгам вышел даже дешевле, чем я рассчитывал. Отдельно хочу отметить помощь в аранжировке — сделали из моей простой идеи настоящий трек."
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Ольга",
+            "text": "Писала песню для души, впервые в жизни. Очень переживала, но меня буквально за руку провели через весь процесс — от аккордов до записи. Никто не смеялся над моими скромными способностями, наоборот, помогли раскрыться. Теперь у меня есть своя песня, невероятно!"
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Игорь",
+            "text": "Пришёл с сыном записать кавер на его любимую группу. Сыну 15, он был в восторге от процесса. Сводили всё с учётом наших пожеланий, добавили немного современных красок. Получилось свежо, но не испортили оригинал. Отличный опыт для ребёнка."
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Виктория",
+            "text": "Писала песню для души, впервые в жизни. Очень переживала, но меня буквально за руку провели через весь процесс — от аккордов до записи. Никто не смеялся над моими скромными способностями, наоборот, помогли раскрыться. Теперь у меня есть своя песня, невероятно!"
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Роман",
+            "text": "Нужна была запись ударных для нашего альбома. Привёз свои наработки, здесь дали мощный звук, который мы не могли добиться сами. Стыковка с уже записанными партиями прошла идеально. Очень выручили, советую всем рок-музыкантам."
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Павел",
+            "text": "Записывали трек для фонда — благотворительный проект. Подошли с душой, сделали скидку, помогли с аранжировкой. Получилась очень душевная и качественная вещь. Не часто встречаешь такое сочетание профессионализма и человеческого тепла."
+            })
+
+            @@include('../components/review-card.html', {
+            "name": "Анна",
+            "text": "Принесла старую мелодию, на которую хотели записать новую аранжировку. Результат превзошел ожидания — звучание стало современным, но узнаваемым. Все правки вносили оперативно, без лишних вопросов. Теперь планируем записать целый мини-альбом."
+            })
+        </div>
+    </section>
+
+    <section class="kontakt">
+        @@include('../components/_contact.html')
+    </section>
+
+</main>
+
+@@include('../components/_modal.html')
+
+<script src="./js/reviews-slider.js"></script>
+<script src="./js/modal.js"></script>
+
+</body>
+</html>

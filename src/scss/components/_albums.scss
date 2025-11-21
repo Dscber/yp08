@@ -1,0 +1,43 @@
+.albums {
+  max-width: 1400px; // контейнер страницы
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    /* фиксированная ширина колонок, чтобы сетка не растягивалась по всей доступной ширине */
+    grid-template-columns: repeat(3, 320px);
+    gap: 40px;
+
+    /* Центрируем всю сетку внутри контейнера */
+    justify-content: center;  // центрируем по горизонтали
+    align-items: center;      // центрируем по вертикали (важно!)
+
+    /* на tablet — 2 колонки (тоже центрированы) */
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 320px);
+      justify-content: center;
+    }
+
+    /* на мобильных — одна колонка (ширина 100% с макс-шириной) */
+    @media (max-width: 650px) {
+      grid-template-columns: 1fr;
+      /* чтобы карточки не растягивались до краёв — ограничим их ширину */
+      justify-content: center;
+      gap: 24px;
+
+      & > .album-card {
+        max-width: 420px; /* можно менять под дизайн */
+        width: 100%;
+
+      }
+    }
+  }
+}

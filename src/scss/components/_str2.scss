@@ -1,0 +1,17 @@
+.str2{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  &__block{
+    display: grid;
+    gap: 8px;
+    &__text{
+      font-size: 20px;
+      color: #9f9f9f;
+      font-weight: 600;
+    }
+    &__title{
+      margin: 0;
+    }
+  }
+}

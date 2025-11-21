@@ -1,0 +1,142 @@
+.header {
+  font-size: 24px;
+  width: 100%;
+  background-color: #EEEEEE;
+  padding: 20px 0;
+
+  &.dark {
+    background-color: #2E2E2E;
+    color: #fff;
+  }
+
+  &__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    img { width: 60px; }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+
+    a { text-decoration: none; color: inherit; }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    .header__icons {
+      display: flex;
+      gap: 15px;
+
+      img {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #fff;
+        padding: 6px;
+      }
+    }
+  }
+}
+
+/* Adaptive */
+/* Desktop 1920–1280 */
+@media (min-width: 1280px) {
+  .header__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(20px, 5vw, 60px);
+  }
+}
+
+/* Tablet 1279–768 */
+@media (max-width: 1279px) and (min-width: 768px) {
+  .header__container {
+    padding-right: 100px;
+    gap: 40px;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: clamp(20px, 4vw, 40px);
+  }
+
+  .header__contacts .header__phone {
+    display: none;
+  }
+
+  .header__icons img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .header__burger {
+    display: none;
+  }
+}
+
+/* Mobile 767–320 */
+@media (max-width: 767px) {
+  .header__title {
+    display: none;
+  }
+
+  .header__contacts .header__phone {
+    display: none;
+  }
+
+  .header__icons img {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__container {
+    gap: clamp(10px, 5vw, 30px);
+  }
+}
+
+/* Burger */
+.burger {
+  width: 40px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 4px;
+    background: #bbb;
+    border-radius: 2px;
+  }
+}
