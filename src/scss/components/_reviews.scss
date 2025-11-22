@@ -3,13 +3,15 @@
   margin-right: 20px;
   padding: 60px 0;
   text-align: center;
-  background: #EEEEEE;
+  background: var(--bg);
+  color: var(--text);
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   margin-top: 100px;
+
   .review-card::-webkit-scrollbar {
     height: 10px;
   }
@@ -21,6 +23,7 @@
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 40px;
+    color: var(--text);
   }
 
   &__slider {
@@ -65,11 +68,17 @@
 
 .review-card {
   flex: 0 0 300px;
-  background: #ffffff;
+  background: var(--bg);
   padding: 25px 22px;
   border-radius: 14px;
   text-align: left;
   position: relative;
+  box-shadow:
+          20px 120px 200px var(--teni),    /* 1 */
+          0px 2px 120px var(--teni1),    /* 2 */
+          0px 2px 120px var(--teni2),    /* 3 */
+          0px 2px 120px var(--teni3),    /* 4 */
+          0px 2px 65px var(--teni4);     /* 5–6 */
 
   &__icon {
     width: 28px;

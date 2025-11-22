@@ -1,0 +1,42 @@
+.babout-card {
+  width: 70%;
+  max-width: 900px;
+  margin: 80px auto;
+  background: var(--bg);
+  color: var(--text);
+  padding: 50px 60px;
+  border-radius: 30px;
+  text-align: center;
+
+  /* Мягкие многослойные тени */
+  box-shadow:
+          20px 120px 200px var(--teni),    /* 1 */
+          0px 2px 120px var(--teni1),    /* 2 */
+          0px 2px 120px var(--teni2),    /* 3 */
+          0px 2px 120px var(--teni3),    /* 4 */
+          0px 2px 65px var(--teni4);     /* 5–6 */
+}
+
+.babout-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.babout-card p {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 400;
+  text-align: left;
+}
+.babout-card__zag {
+  position: relative;
+  padding-left: 16px;
+}
+
+.babout-card__dot::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}

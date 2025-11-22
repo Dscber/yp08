@@ -17,6 +17,7 @@
 @use 'components/homenext';
 @use 'components/str2';
 @use 'components/about';
+@use 'components/babout';
 @use 'components/hero';
 @use 'components/feature-card';
 @use 'components/features';
@@ -26,13 +27,18 @@
 @use 'components/contact';
 @use 'components/modal';
 @use 'components/form';
+@use 'components/bcard';
+@use "base/theme";
+
 
 body {
-  background-color: var(--main-color);
+  background-color: var(--bg);
   margin: 0 auto;
 }
 a{
     text-decoration: none;
 }
-
+::-webkit-scrollbar{
+  width: 0;
+}
 

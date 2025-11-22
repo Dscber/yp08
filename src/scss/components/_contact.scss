@@ -4,7 +4,7 @@
   align-items: center;
 
   padding: 40px 20px;
-  background: #f2f2f2;
+  background: var(--bg);
   border-radius: 20px;
   gap: 40px;
 
@@ -23,11 +23,13 @@
   &__title {
     font-size: 28px;
     font-weight: 700;
+    color: var(--text);
   }
 
   &__phone {
     font-size: 20px;
     margin-top: 10px;
+    color: var(--text);
   }
 
   &__icons {
@@ -76,10 +78,10 @@
   }
 }
 
-/* Кнопка (та же, что у тебя по сайту) */
+/* Кнопка  */
 .btn-orange {
   background: #FF9D00;
-  color: #fff;
+  color: var(--text);
   border: none;
   font-size: 18px;
   padding: 14px 32px;

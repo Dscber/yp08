@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Модальное окно</title>
+
+    <style>
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            display: none;
+        justify-content: center;
+            align-items: center;
+            z-index: 9999;
+
+            &.active {
+            display: flex;
+            }
+        }
+
+        .modal__content {
+            background: #fff;
+            width: 90%;
+            max-width: 520px;
+            padding: 30px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .modal__close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .modal__title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .modal__form label {
+            display: block;
+            margin-bottom: 18px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .modal__input {
+            width: 90%;
+            padding: 16px;
+            background: #e5e5e5;
+            border: none;
+            border-radius: 12px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        .modal__checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .modal__submit {
+            width: 100%;
+            padding: 18px 0;
+            background: orange;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<button class="hero__button openModalBtn">Оставить заявку</button>
+
+<div class="modal" id="modal">
+    <div class="modal__content">
+        <button class="modal__close" id="closeModalBtn">×</button>
+
+        <h2 class="modal__title">Оформить заявку</h2>
+
+        <form id="requestForm" class="modal__form">
+            <label>Фамилия и имя
+                <input type="text" name="fullname" class="modal__input" required>
+            </label>
+
+            <label>Электронная почта
+                <input type="email" name="email" class="modal__input" required>
+            </label>
+
+            <label>Телефон
+                <input type="tel" name="phone" class="modal__input" required>
+            </label>
+
+            <label class="modal__checkbox">
+                <input type="checkbox" required>
+                <span>
+                    Согласен с <a href="#">условиями обработки персональных данных</a>,
+                    пользовательского соглашения, политикой конфиденциальности и офертой
+                </span>
+            </label>
+
+            <button type="submit" class="modal__submit">Оставить заявку</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.querySelector(".openModalBtn");
+    const closeBtn = document.getElementById("closeModalBtn");
+
+    openBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+</script>
+
+</body>
+</html>

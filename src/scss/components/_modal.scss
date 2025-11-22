@@ -6,8 +6,11 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-}
 
+  &.active {
+    display: flex;
+  }
+}
 
 .modal__content {
   background: #fff;
@@ -15,17 +18,18 @@
   max-width: 520px;
   padding: 30px;
   border-radius: 16px;
+  position: relative;
 }
 
-
 .modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
-  float: right;
 }
-
 
 .modal__title {
   font-size: 28px;
@@ -33,14 +37,12 @@
   margin-bottom: 20px;
 }
 
-
 .modal__form label {
   display: block;
   margin-bottom: 18px;
   font-size: 18px;
   font-weight: 600;
 }
-
 
 .modal__input {
   width: 90%;
@@ -52,14 +54,12 @@
   font-size: 16px;
 }
 
-
 .modal__checkbox {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 14px;
 }
-
 
 .modal__submit {
   width: 100%;

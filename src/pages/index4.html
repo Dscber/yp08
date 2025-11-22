@@ -1,259 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/main.css"/>
+    <title>Document</title>
 </head>
 <body>
+
+
+
 @@include('../components/_header.html')
-@@include('../components/_homenext.html',{
-"title":"Product Comparison",
-"text": "Comparison"
-})
-<section class="main1__str4">
-    <div class="main1__str4__block1">
-        <div class="main1__str4__block1__txt">Go to Product <br>
-            page for more <br>
-            Products</div>
-        <button class="main1__str4__block1__but" >View More</button>
-        <div class="main1__str4__block1__rect"></div>
-    </div>
-    <div class="main1__str4__block2">
-        <div><img  src="./assets/images/str5_1_1.webp"></div>
-        <div class="main1__str4__block2__as">Asgaard Sofa</div>
-        <div class="main1__str4__block2__rs">Rs. 250,000.00</div>
-        <div class="main1__str4__block1__zvez">
-            <div class="main1__str3__block1__zvez__chif">4.7</div>
-            <div><img  src="./assets/images/str3_zvezda.webp"></div>
-            <div class="block1__line"></div>
-            <div class="block1__txt1">204 Customer Review</div>
+
+@@include('../components/_hero.html')
+
+@@include('../components/_about.html', {
+"title": "О НАС",
+"text": "«Резонанс миров» — это больше чем студия. Это точка пересечения вашего внутреннего звука и внешнего мира. Мы помогаем артистам, подкастерам и авторам обрести свой уникальный голос и превратить его в чистое, профессиональное звучание, которое находит отклик в сердцах слушателей." }
+)
+
+@@include('../components/_about.html', {
+"title": "НАША МИССИЯ",
+"text": "«Мы верим, что каждая песня имеет уникальную душу. Наша миссия — не просто ее записать, а услышать, понять и помочь ей раскрыться с помощью звука. Мы — ваш надежный партнер на каждом этапе: от аранжировки до мастеринга." }
+)
+@@include('../components/_babout.html', {
+"title": "НАША ИСТОРИЯ",
+"text": "&bull; 2020 - Рождение мечты <br> «Основатель, Виктор Орлов, превратил собственную квартиру в мини-студию, где записывал первые демо местных рок-групп. Именно тогда родилась философия студии: комфорт для артиста и внимание к деталям.» <br> &bull; 2023 - Расширение горизонтов <br>«Открылось направление саунд-дизайна и написания музыки для рекламы, кино и видеоигр. Наш инженер Мария стала лауреатом премии «Золотой кадр» за лучший звук в короткометражном фильме.» <br> &bull; 2025 - Ваша история <br>«Мы продолжаем расти и развиваться. И сейчас готовы помочь воплотить в жизнь ваш музыкальный проект, используя весь наш многолетний опыт.»" }
+)
+@@include('../components/_babout.html', {
+"title": "НАШИ ПРИНЦИПЫ",
+"text": "&bull; Прозрачность и коллаборация<br>Вы — полноправный участник процесса. Все правки вносятся открыто, вы всегда в курсе этапов работы. Мы не используем непонятный жаргон и всегда объясняем, почему предлагаем то или иное решение.<br> &bull; Дедлайн — это святое<br>Мы ценим ваше время. Вы получаете четкий план работы и знаете, когда будет готов черновой микс, финальная версия и мастеринг. Мы всегда укладываемся в оговоренные сроки.<br> &bull; Технологии на службе у творчества<br>Мы используем только лучшее оборудование (Neumann, Universal Audio, SSL) и лицензионное ПО. Но мы помним, что техника — это лишь инструмент. Наша главная цель — реализовать ваше творческое видение." }
+)
+
+<main>
+
+    <section class="features">
+
+        <h2 class="features__title">
+            КОМАНДА
+        </h2>
+
+        <div class="features__grid">
+
+            @@include('../components/_bcard.html', {
+            "icon": "../assets/images/img_41.svg",
+            "title": "Мария Светлова",
+            "text": "Выпускница Berklee College of Music. Мария — наш «волшебник» чистоты и громкости. Она дышит современной электронной музыкой, хип-хопом и поп-продукцией. Именно она делает ваш трек готовым к стриминговым платформам."
+            })
+
+            @@include('../components/_bcard.html', {
+            "icon": "../assets/images/img_42.svg",
+            "title": "Виктор Орлов",
+            "text": "Более 15 лет в индустрии. Специализация — рок, инди-поп и авторская песня. Виктор видит проект в целом и помогает артисту выстроить композицию и аранжировку, чтобы песня зазвучала мощно и целостно."
+            })
+
+            @@include('../components/_bcard.html', {
+            "icon": "../assets/images/img_43.svg",
+            "title": "Артем Жуков",
+            "text": "Наш специалист по работе с артистами «в полях». Артем обладает безупречным слухом и знает, как расположить к себе любого музыканта. Он отвечает за безупречное качество исходного звука, будь то партия ударных или хрупкий вокал."
+            })
+
+            @@include('../components/_bcard.html', {
+            "icon": "../assets/images/img_44.svg",
+            "title": "Алина Петрова",
+            "text": "Если у вас есть голая песня и вы хотите одеть ее в красивые аранжировки — Алина ваш человек. Создает партии для струнных, синтезаторов и электронных битов, которые идеально дополняют вашу идею."
+            })
+
+            @@include('../components/_bcard.html', {
+            "icon": "../assets/images/img_45.svg",
+            "title": "Дмитрий Волков",
+            "text": "Главный инноватор и «золотой слух» в мире современных жанров. Он живет в ритме будущего, создавая уникальные биты, фирменные синтезаторные тембры и авторские сэмпл-паки, которые становятся визитной карточкой треков."
+            })
+
         </div>
-    </div>
-    <div class="main1__str4__block2__top">
-        <div><img  src="./assets/images/str5_1_2.webp"></div>
-        <div class="main1__str4__block2__as">Outdoor Sofa Set</div>
-        <div class="main1__str4__block2__rs">Rs. 224,000.00</div>
-        <div class="main1__str4__block1__zvez">
-            <div class="main1__str3__block1__zvez__chif">4.2</div>
-            <div><img  src="./assets/images/str3_zvezda.webp"></div>
-            <div class="block1__line"></div>
-            <div class="block1__txt1">145 Customer Review</div>
+
+    </section>
+
+    <section class="albums">
+        <h2 class="albums__title">НАША СТУДИЯ</h2>
+
+        <div class="albums__grid">
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_51.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_52.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_53.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_54.svg"
+            })
+
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_55.svg"
+            })
+            @@include('../components/_album-card.html', {
+            "image": "assets/images/img_56.svg"
+            })
+
         </div>
-    </div>
-    <div class="main1__str4__block3">
-        <div class="main1__str4__block3__txt1">Add A Product</div>
-        <div class="main1__str4__block3__img1">
-            <div class="main1__str4__block3__txt">Choose a Product</div>
-            <div class="main1__str4__block3__img"><img src="./assets/images/str4_11.webp" alt="sadjjnakiusbdiknj"></div>
-        </div>
-    </div>
-</section>
-<section class="product-table-section">
-  <div class="product-table-section__container">
-    <table>
-      <thead>
-      <tr class="container__header-row">
-        <th class="general-header">General</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr class="data-row">
-        <td>Sales Package</td>
-        <td class="bordered-right">1 sectional sofa</td>
-        <td class="bordered-right">1 Three Seater, 2 Single Seater</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Model Number</td>
-        <td class="bordered-right">TFCBLIGRBL6SRHS</td>
-        <td class="bordered-right">DTUBLIGRBL568</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Secondary Material</td>
-        <td class="bordered-right">Solid Wood</td>
-        <td class="bordered-right">Solid Wood</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Configuration</td>
-        <td class="bordered-right">L-shaped</td>
-        <td class="bordered-right">L-shaped</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Upholstery Material</td>
-        <td class="bordered-right">Fabric + Cotton</td>
-        <td class="bordered-right">Fabric + Cotton</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Upholstery Color</td>
-        <td class="bordered-right">Bright Grey & Lion</td>
-        <td class="bordered-right">Bright Grey & Lion</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="header-row2">
-        <th class="product-header">Product</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-      </tr>
-      <tr class="data-row">
-        <td>Filling Material</td>
-        <td class="bordered-right">Foam</td>
-        <td class="bordered-right">Matte</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Finish Type</td>
-        <td class="bordered-right">Bright Grey & Lion</td>
-        <td class="bordered-right">Bright Grey & Lion</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Adjustable Headrest</td>
-        <td class="bordered-right">No</td>
-        <td class="bordered-right">yes</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Maximum Load Capacity</td>
-        <td class="bordered-right">280 KG</td>
-        <td class="bordered-right">300 KG</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Origin of Manufacture</td>
-        <td class="bordered-right">India</td>
-        <td class="bordered-right">India</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="header-row2">
-        <th class="dimensions-header">Dimensions</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-      </tr>
-      <tr class="data-row">
-        <td>Width</td>
-        <td class="bordered-right">265.32 cm</td>
-        <td class="bordered-right">265.32 cm</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Height</td>
-        <td class="bordered-right">78 cm</td>
-        <td class="bordered-right">78 cm</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Depth</td>
-        <td class="bordered-right">167.76 cm</td>
-        <td class="bordered-right">167.76 cm</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Weight</td>
-        <td class="bordered-right">45 KG</td>
-        <td class="bordered-right">65 KG</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Seat Height</td>
-        <td class="bordered-right">41.52 cm</td>
-        <td class="bordered-right">41.52 cm</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Leg Height</td>
-        <td class="bordered-right">5.46 cm</td>
-        <td class="bordered-right">5.46 cm</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="header-row2">
-        <th class="warranty-header">Warranty</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-        <th class="empty-col">&nbsp;</th>
-      </tr>
-      <tr class="data-row">
-        <td>Warranty Summary</td>
-        <td class="bordered-right">1 Year Manufacturing Warranty</td>
-        <td class="bordered-right">1.2 Year Manufacturing Warranty</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Warranty Service Type</td>
-        <td class="bordered-right">For Warranty Claims or Any Product Related Issues Please Email at operations@trevifurniture.com</td>
-        <td class="bordered-right">Warranty Claims or Any Product Related Issues Please Email at support@xyz.com</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Covered in Warranty</td>
-        <td class="bordered-right">Warranty Against Manufacturing Defect</td>
-        <td class="bordered-right">Warranty of the product is limited to manufacturing defects only.</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Not Covered in <br>Warranty</td>
-        <td class="bordered-right">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
-        <td class="bordered-right">The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="data-row">
-        <td>Domestic Warranty</td>
-        <td class="bordered-right">1 Year</td>
-        <td class="bordered-right">3 Months</td>
-        <td class="empty-col">&nbsp;</td>
-      </tr>
-      <tr class="button-row">
-        <td>&nbsp;</td>
-        <td class="bordered-right">
-          <button class="product-table-section__add-to-cart-button">Add to Cart</button>
-        </td>
-        <td class="bordered-right">
-          <button class="product-table-section__add-to-cart-button">Add to Cart</button>
-        </td>
-        <td class="empty-col"></td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="main3__str2">
-    @@include("./_str2.html",{
-    "img":"/assets/images/str2_3_1",
-    "alt":"Кубок",
-    "title":"High Quality",
-    "text":"crafted from top materials"
-    })
-    @@include("./_str2.html",{
-    "img":"./assets/images/str2_3_2",
-    "alt":"Галочка",
-    "title":"Warranty Protection",
-    "text":"Over 2 years"
-    })
-    @@include("./_str2.html",{
-    "img":"./assets/images/str2_3_3",
-    "alt":"Сундук",
-    "title":"Free Shipping",
-    "text":"Order over 150 $"
-    })
-    @@include("./_str2.html",{
-    "img":"./assets/images/str2_3_4",
-    "alt":"Поддержка",
-    "title":"24 / 7 Support",
-    "text":"Dedicated support"
-    })
-</section>
-@@include('../components/_footer.html')
+    </section>
+
+    <section class="kontakt">
+        @@include('../components/_contact.html')
+    </section>
+
+</main>
+
+@@include('../components/_modal.html')
+
+<script src="./js/reviews-slider.js"></script>
+<script src="./js/modal.js"></script>
+
 </body>
 </html>

@@ -2,60 +2,71 @@
     <div class="modal__content">
         <button class="modal__close" id="closeModalBtn">×</button>
 
-
         <h2 class="modal__title">Оформить заявку</h2>
-
 
         <form id="requestForm" class="modal__form">
             <label>Фамилия и имя
                 <input type="text" name="fullname" class="modal__input" required>
             </label>
 
-
             <label>Электронная почта
                 <input type="email" name="email" class="modal__input" required>
             </label>
-
 
             <label>Телефон
                 <input type="tel" name="phone" class="modal__input" required>
             </label>
 
-
             <label class="modal__checkbox">
                 <input type="checkbox" required>
-                <span>Согласен с <a href="#">условиями обработки персональных данных</a>,
-пользовательского соглашения, политикой конфиденциальности и офертой</span>
+                <span>
+                    Согласен с <a href="#">условиями обработки персональных данных</a>,
+                    пользовательского соглашения, политикой конфиденциальности и офертой
+                </span>
             </label>
-
 
             <button type="submit" class="modal__submit">Оставить заявку</button>
         </form>
     </div>
 </div>
 
-
 <script>
     const modal = document.getElementById("modal");
-    const openBtns = document.querySelectorAll(".openModalBtn");
+    const openBtn = document.querySelector(".openModalBtn");
     const closeBtn = document.getElementById("closeModalBtn");
-    const form = document.getElementById("requestForm");
 
-
-    openBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            form.reset();
-            modal.classList.add("active");
-        });
+    openBtn.addEventListener("click", () => {
+        modal.classList.add("active");
     });
-
 
     closeBtn.addEventListener("click", () => {
         modal.classList.remove("active");
     });
 
-
     modal.addEventListener("click", (e) => {
-        if (e.target === modal) modal.classList.remove("active");
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
     });
 </script>
+
+<script>
+    const modal2 = document.getElementById("modal");
+    const openBtn2 = document.querySelector(".openModalBtn2");
+    const closeBtn2 = document.getElementById("closeModalBtn");
+
+    openBtn2.addEventListener("click", () => {
+        modal.classList.add("active");
+    });
+
+    closeBtn2.addEventListener("click", () => {
+        modal.classList.remove("active");
+    });
+
+    modal2.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+</script>
+

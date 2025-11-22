@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Theme Switcher</title>
+    <style>
+        /* 🌞 Светлая тема (по умолчанию) */
+        :root {
+            --bg: #ffffff;
+            --text: #000000;
+        }
+
+        /* 🌙 Тёмная тема */
+        .dark {
+            --bg: #1a1a1a;
+            --text: #ffffff;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+            padding: 40px;
+        }
+
+        .theme-btn {
+            padding: 12px 18px;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<button class="theme-btn" id="themeToggle">Сменить тему</button>
+
+<script>
+    const button = document.getElementById("themeToggle");
+
+    // 1. При загрузке страницы — читаем сохранённую тему
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+    }
+
+    // 2. Переключение темы по кнопке
+    button.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+
+        // 3. Сохраняем выбранную тему
+        if (document.documentElement.classList.contains("dark")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    });
+
+</script>
+
+</body>
+</html>
